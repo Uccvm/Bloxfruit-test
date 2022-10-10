@@ -1,41 +1,653 @@
-# Compiled Lua sources
-luac.out
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Blox Fruits Nate Hub", "BloodTheme") -- CREATES THE WINDOW
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+-- { " Autofarms " }
+local AutofarmsSection = Window:NewTab("Autofarms")
+local AutofarmsSection = AutofarmsSection:NewSection("Autofarms")
 
-# Precompiled Headers
-*.gch
-*.pch
+local ExtraSection = Window:NewTab("Extra")
+local ExtraSection = ExtraSection:NewSection("Extra")
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+local TeleportsSection = Window:NewTab("Teleports")
+local TeleportsSection = TeleportsSection:NewSection("Teleports")
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+AutofarmsSection:NewButton("AutofarmTest", "Auto farms is a test", function()
+        while( true )
+        do
+        local Mob = workspace.Enemies["Military Soldier [Lv. 300]"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace.Enemies["Military Soldier [Lv. 300]"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 13))
+        if game.workspace.Enemies["Military Soldier [Lv. 300]"].Humanoid.Health == 0 then wait(0.1) mob:Destroy() break; end -- IF THE MOB IS DEAD THEN JUST DESTROY IT FOR FASTER FARMING
+        task.wait(0.07)
+        end
+    end)
 
+    AutofarmsSection:NewButton("Toga", "Auto farms is a Toga", function()
+        while( true )
+        do
+        local Mob = workspace.Enemies["Toga Warrior [Lv. 250]"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace.Enemies["Toga Warrior [Lv. 250]"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 13))
+        if game.workspace.Enemies["Toga Warrior [Lv. 250]"].Humanoid.Health == 0 then wait(0.1) mob:Destroy() break; end -- IF THE MOB IS DEAD THEN JUST DESTROY IT FOR FASTER FARMING
+        task.wait(0.07)
+        end
+    end)
+
+    AutofarmsSection:NewButton("Gladiators", "Auto farms is a Gladiators", function()
+        while( true )
+        do
+        local Mob = workspace.Enemies["Gladiator [Lv. 275]"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace.Enemies["Gladiator [Lv. 275]"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 13))
+        if game.workspace.Enemies["Gladiator [Lv. 275]"].Humanoid.Health == 0 then wait(0.1) mob:Destroy() break; end
+ while true do
+        task.wait(0.07)
+        while( true )
+        do
+        local Mob = workspace.Enemies["Gladiator [Lv. 275]"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace.Enemies["Gladiator [Lv. 275]"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 13))
+        task.wait(0.07)
+        end
+    end
+end
+    end)
+
+
+    TeleportsSection:NewButton("lvl-120is", "Teleports to 120", function()
+
+        local teleport_table = {
+            location1 = Vector3.new(-4759.3369140625, 20.65204429626465, 4657.68310546875), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(15,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('ez1')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    end)
+
+    TeleportsSection:NewButton("Shop Area", "Teleports to Shop Area", function()
+
+        local teleport_table = {
+            location1 = Vector3.new(-1219.3175048828125, 19.054155349731445, 1721.63037109375), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(15,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('ez1')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    end)
+
+    TeleportsSection:NewButton("Collesium Tp", "Teleports to Collesum", function()
+
+        local teleport_table = {
+            location1 = Vector3.new(-1474.9736328125, 7.285595417022705, -2880.878662109375), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(15,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('ez1')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    end)
+
+
+    TeleportsSection:NewButton("Volcano Tp", "Teleports to Volcano-300", function()
+
+        local teleport_table = {
+            location1 = Vector3.new(-5232.33203125, 8.590256690979004, 8444.28125), -- your desired position
+        }
+        
+        local tween_s = game:GetService('TweenService')
+        local tweeninfo = TweenInfo.new(15,Enum.EasingStyle.Linear)
+        
+        local lp = game.Players.LocalPlayer
+        
+        function bypass_teleport(v)
+            if lp.Character and 
+            lp.Character:FindFirstChild('HumanoidRootPart') then
+                local cf = CFrame.new(v)
+                local a = tween_s:Create(lp.Character.HumanoidRootPart,tweeninfo,{CFrame=cf})
+                a:Play()
+                -- a.Completed:Wait()
+                -- print('ez1')
+            end
+        end
+        
+        bypass_teleport(teleport_table.location1)
+    end)
+    
+    ExtraSection:NewButton("Auto-Chests-rejoin-to-stop", "Autofarms chests rejoin to stop", function()
+        while true
+        do
+        local part = game:GetService("Workspace").Chest2
+        
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = part.CFrame
+        task.wait(21)
+        end
+    end)
+
+    ExtraSection:NewButton("Auto-chest-needs-this-jump", "Auto-chest-jump", function()
+    while true do wait()
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+        end
+    end)
+
+    ExtraSection:NewButton("Fog-Remove", "Remove-Fog", function()
+        while true
+        do
+game.Lighting.FogEnd = 10000000000
+task.wait(0.5)
+        end
+    end)
+
+    ExtraSection:NewButton("Find Fruits", "Find Fruits", function()
+               local Mob = workspace["Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+ 
+        
+        
+        local Mob = workspace["Spin Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Spin Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+
+
+        local Mob = workspace["Dark Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Dark Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+
+
+        local Mob = workspace["Ice Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Ice Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+
+
+        local Mob = workspace["Magma Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Magma Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+
+        local Mob = workspace["Bird: Pheonix Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Pheonix Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+        
+        local Mob = workspace["Door Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Door Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+        
+        local Mob = workspace["Dragon Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Dragon Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Kilo Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Kilo Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Chop Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Chop Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Spring Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Spring Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Bomb Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Bomb Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Smoke Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Smoke Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Spike Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Spike Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Flame Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Flame Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Sand Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Sand Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Revive Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Revive Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Diamond Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Diamond Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Light Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Light Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Love Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Love Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Rubber Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Rubber Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Barrier Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Barrier Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Quake Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Quake Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["String Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["String Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Rumble Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Rumble Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Paw Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Paw Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+        
+        local Mob = workspace["Gravity Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Gravity Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Dough Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Dough Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Shadow Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Shadow Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Venom Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Venom Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Control Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Control Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Soul Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Soul Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+        local Mob = workspace["Leopard Fruit"] -- pretend this is a path to a real mob model, with a humanoid and body
+        local Body = workspace["Leopard Fruit"].PrimaryPart -- this will get the primary part of the model, more info here: https://developer.roblox.com/en-us/api-reference/property/Model/PrimaryPart
+        local BodyCFrame = Body.CFrame -- the CFrame of the mob's body
+        
+        -- here is the teleport, we change the player's humanoidrootpart CFrame to our desired CFrame (avoid using position as it messes with your character's welds)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame - BodyCFrame.LookVector * 3
+        
+        -- this will teleport you 3 studs behind the mob on the Z axis (the Z axis may not always be the one the mob is facing forwards with, mess around with this a bit to find out which axis is correct)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = BodyCFrame:ToWorldSpace(CFrame.new(0, 0, 0))
+
+end)
+
+
+    ExtraSection:NewButton("Fly", "flys", function()
+-- Press E to toggle
+
+repeat wait()
+until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("UpperTorso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+local mouse = game.Players.LocalPlayer:GetMouse()
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer
+local UpperTorso = plr.Character.UpperTorso
+local flying = true
+local deb = true
+local ctrl = {f = 0, b = 0, l = 0, r = 0}
+local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+local maxspeed = 50
+local speed = 0
+
+function Fly()
+local bg = Instance.new("BodyGyro", UpperTorso)
+bg.P = 9e4
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+bg.cframe = UpperTorso.CFrame
+local bv = Instance.new("BodyVelocity", UpperTorso)
+bv.velocity = Vector3.new(0,0.1,0)
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+repeat wait()
+plr.Character.Humanoid.PlatformStand = true
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+speed = speed+.5+(speed/maxspeed)
+if speed > maxspeed then
+speed = maxspeed
+end
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+speed = speed-1
+if speed < 0 then
+speed = 0
+end
+end
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+else
+bv.velocity = Vector3.new(0,0.1,0)
+end
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+until not flying
+ctrl = {f = 0, b = 0, l = 0, r = 0}
+lastctrl = {f = 0, b = 0, l = 0, r = 0}
+speed = 0
+bg:Destroy()
+bv:Destroy()
+plr.Character.Humanoid.PlatformStand = false
+end
+mouse.KeyDown:connect(function(key)
+if key:lower() == "e" then
+if flying then flying = false
+else
+flying = true
+Fly()
+end
+elseif key:lower() == "w" then
+ctrl.f = 1
+elseif key:lower() == "s" then
+ctrl.b = -1
+elseif key:lower() == "a" then
+ctrl.l = -1
+elseif key:lower() == "d" then
+ctrl.r = 1
+end
+end)
+mouse.KeyUp:connect(function(key)
+if key:lower() == "w" then
+ctrl.f = 0
+elseif key:lower() == "s" then
+ctrl.b = 0
+elseif key:lower() == "a" then
+ctrl.l = 0
+elseif key:lower() == "d" then
+ctrl.r = 0
+end
+end)
+Fly()
+end)
+
+ExtraSection:NewSlider("walkspeed", "Slider to change your Walkspeed", 500, 27, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    getgenv().WalkSpeedValue = s; --set your desired walkspeed here
+    local Player = game:service'Players'.LocalPlayer;
+    Player.Character.Humanoid:GetPropertyChangedSignal'WalkSpeed':Connect(function()
+    Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
+    end)
+    Player.Character.Humanoid.WalkSpeed = getgenv().WalkSpeedValue;
+  end)
+  
+  
+  ExtraSection:NewSlider("JumpPower", "Slider to change your JumpPower", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    getgenv().JumpPowerValue = s; --set your desired walkspeed here
+    local Player = game:service'Players'.LocalPlayer;
+    Player.Character.Humanoid:GetPropertyChangedSignal'JumpPower':Connect(function()
+    Player.Character.Humanoid.JumpPower = getgenv().JumpPowerValue;
+    end)
+    Player.Character.Humanoid.JumpPower = getgenv().JumpPowerValue;
+  end)
